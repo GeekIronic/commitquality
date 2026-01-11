@@ -30,4 +30,12 @@ Feature: Validación y verificación de la visualización y funcionamiento basic
     When el usuario da clic en la opcion "Login"
     Then el sistema lo redireccionara al formulario del login
 
+  @Query
+  Scenario: Validar campo y boton de busqueda
+    Given que el usuario entro a la pagina web
+    And que el usuario visualiza el naver del home
+    When el usuario visualiza el campo Filter y los botones Filter y Reset
+    And el usuario agrega en el campo busqueda el valor "Product 1" y da clic en Buscar
+    Then el sistema mostrar en la tabla de resultados la información que contenga en sus valores el valor "Product 1"
+
 
