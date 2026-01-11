@@ -6,30 +6,41 @@ public class HomePage {
     private String TitelHome = "//p[@class='banner-message']";
     private String ListOptionsNaverHome = "//div[@class='nav-links ']//child::a";
     private String[] LinksNaver = {"Products","Add Product","Practice","Learn","Login"};
+    private String InputQuery = "//input[@class='filter-textbox']";
+    private String BtnsQuerys = "//button[@class='filter-button']";
 
     public HomePage() {}
 
-    public HomePage(String NaverHome, String TitelHome, String ListOptionsNaverHome, String[] LinksNaver){
-        this.NaverHome = NaverHome;
-        this.TitelHome = TitelHome;
-        this.ListOptionsNaverHome = ListOptionsNaverHome;
-        this.LinksNaver = LinksNaver;
+    public HomePage(String naverHome, String titelHome, String listOptionsNaverHome, String[] linksNaver, String inputQuery, String btnsQuerys) {
+        NaverHome = naverHome;
+        TitelHome = titelHome;
+        ListOptionsNaverHome = listOptionsNaverHome;
+        LinksNaver = linksNaver;
+        InputQuery = inputQuery;
+        BtnsQuerys = btnsQuerys;
+    }
+
+    public String getNaverHome() {
+        return NaverHome;
+    }
+
+    public String getTitelHome() {
+        return TitelHome;
+    }
+
+    public String getListOptionsNaverHome() {
+        return ListOptionsNaverHome;
     }
 
     public String[] getLinksNaver() {
         return LinksNaver;
     }
 
-    public String getTitelHome(){
-        return this.TitelHome;
+    public String getInputQuery() {
+        return InputQuery;
     }
 
-    public String getNaverHome(){
-        return this.NaverHome;
+    public String getBtnsQuerys() {
+        return BtnsQuerys;
     }
-
-    public String getListOptionsNaverHome(){
-        return this.ListOptionsNaverHome;
-    }
-
 }

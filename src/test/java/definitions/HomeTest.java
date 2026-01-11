@@ -131,6 +131,4 @@ public class HomeTest {
         Assert.assertTrue("No existe el botón de login",FormLoginButton.isDisplayed());
         Thread.sleep(4000);
     }
-
-
 }
