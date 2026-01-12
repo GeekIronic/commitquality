@@ -1,8 +1,17 @@
 package pages;
 
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+import utils.FactoryWebElements;
+
 public class HomePage {
 
-    private String NaverHome = "//div[@class='nav-links ']";
+    public static WebElement getInputNaverHome(WebDriver driver){
+        return FactoryWebElements.initWithXapth(driver, "//div[@class='nav-links ']");
+    }
+
+
+    //private String NaverHome = "//div[@class='nav-links ']";
     private String TitelHome = "//p[@class='banner-message']";
     private String ListOptionsNaverHome = "//div[@class='nav-links ']//child::a";
     private String[] LinksNaver = {"Products","Add Product","Practice","Learn","Login"};
@@ -12,7 +21,7 @@ public class HomePage {
     public HomePage() {}
 
     public HomePage(String naverHome, String titelHome, String listOptionsNaverHome, String[] linksNaver, String inputQuery, String btnsQuerys) {
-        NaverHome = naverHome;
+        //NaverHome = naverHome;
         TitelHome = titelHome;
         ListOptionsNaverHome = listOptionsNaverHome;
         LinksNaver = linksNaver;
@@ -20,9 +29,9 @@ public class HomePage {
         BtnsQuerys = btnsQuerys;
     }
 
-    public String getNaverHome() {
+    /* public String getNaverHome() {
         return NaverHome;
-    }
+    }*/
 
     public String getTitelHome() {
         return TitelHome;

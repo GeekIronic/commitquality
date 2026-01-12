@@ -35,9 +35,13 @@ public class HomeTest {
 
     @And("que el usuario visualiza el naver del home")
     public void que_el_usuario_visualiza_el_naver_del_home() {
-        WebElement naver = driver.findElement(By.xpath(homepage.getNaverHome()));
+
+
+
+        //WebElement naver = driver.findElement(By.xpath(homepage.getNaverHome()));
         getTitelHome = driver.findElement(By.xpath(homepage.getTitelHome()));
-        Assert.assertTrue("El menú de navegación no es visible en la página", naver.isDisplayed());
+        //Assert.assertTrue("El menú de navegación no es visible en la página", naver.isDisplayed());
+        Assert.assertTrue("El menú de navegación no es visible en la página", HomePage.getInputNaverHome(driver).isDisplayed());
     }
     @When("el sistema mostrara las opciones habilitadas del naver y visualizara un titulo de entrada")
     public void el_sistema_mostrara_las_opciones_habilitadas_del_naver_y_visualizara_un_titulo_de_entrada() {
